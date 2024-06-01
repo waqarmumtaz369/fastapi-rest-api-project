@@ -16,9 +16,9 @@ class Role(str, Enum):
 
 # Create a Data Class to store the User Instance in Database 
 class User(BaseModel):
-    id: Optional[UUID] = uuid4
+    id: Optional[UUID] = uuid4()
     first_name: str
     last_name: str
-    middle_name: Optional[str]
+    middle_name: Optional[str] = None
     gender: Gender
     roles: List[Role]
