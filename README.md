@@ -74,7 +74,7 @@ Here's a brief example of how to interact with the API:
 
 ```sh
 curl -X 'GET' 'http://127.0.0.1:8000/api/v1/users' -H 'accept: application/json'
-
+```
 
 ### Add a new user
 
@@ -85,13 +85,14 @@ curl -X 'POST' 'http://127.0.0.1:8000/api/v1/users' -H 'accept: application/json
   "gender": "female",
   "roles": ["user"]
 }'
+```
 
 
 ### Delete a user
 
 ```sh
 curl -X 'DELETE' 'http://127.0.0.1:8000/api/v1/users/674c0976-5e1f-4f51-ade9-fc0d042e0d7f' -H 'accept: application/json'
-
+```
 
 ### Update a user
 
@@ -102,7 +103,7 @@ curl -X 'PUT' 'http://127.0.0.1:8000/api/v1/users/674c0976-5e1f-4f51-ade9-fc0d04
   "gender": "female",
   "roles": ["admin", "user"]
 }'
-
+```
 
 ## Documentation
 
