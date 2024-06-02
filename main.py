@@ -96,3 +96,11 @@ async def register_user(user: User):
     db.append(user)
     # Get the newly created user's uuid
     return{"id": user.id}
+
+# Create a method to Delete a user instance
+@app.delete("/api/v1/users/{user_id}")
+async def delete_user(user_id: UUID):
+    for user in db:
+        if user.id == user_id:
+            db.remove(user)
+            return
