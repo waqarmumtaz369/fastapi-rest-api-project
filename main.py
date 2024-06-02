@@ -79,6 +79,7 @@ db: List[User] = [
         roles=[Role.user]
     )
 ]
+
 # Get method for a root path
 @app.get("/")
 async def root():
@@ -88,3 +89,10 @@ async def root():
 @app.get("/api/v1/users")
 async def fetch_users():
     return db
+
+# Create a post method to add a new user
+@app.post("/api/v1/users")
+async def register_user(user: User):
+    db.append(user)
+    # Get the newly created user's uuid
+    return{"id": user.id}
